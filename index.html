@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinmar DC.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav id="navbar" data-aos="fade-down" data-aos-delay="200">
+
+                <a href="#" class="logo">Reinmarc <span>DC.</span></a>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header_text" data-aos="fade-down">
+                <p id="typing-text">BSIT Student Specializing in Mobile and Web Applications</p>
+                <h1>Hi, I'm <span>Reinmarc</span><br>From Dasmarinas, Cavite</h1>
+            </div>
+            
+        </div>
+    </div>
+    <!-- ------About Section------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/aboutme.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1>About Me</h1>
+                    <p>
+                        I am a 4th-year BSIT student specializing in Mobile and Web Applications at National University - Dasmariñas. With strong organizational and time management skills, I thrive in fast-paced environments. I'm passionate about developing scalable, user-focused web and mobile solutions and continuously expanding my skills through real-world experiences and collaborative projects.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('exp')">Certifications</p>
+                        <p class="tab-links" onclick="opentab('educ')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages</span><br>Python, Dart, PHP, JavaScript, SQL</li>
+                            <li><span>Web & Mobile Development</span><br>HTML, CSS, Flutter, MySQL, PhpMyAdmin, Android Studio</li>
+                            <li><span>Design & Prototyping</span><br>Figma, Canva, Photoshop</li>
+                            <li><span>Tools & Platforms</span><br>VS Code, XAMPP, Google Workspace, Microsoft 365</li>
+                            <li><span>Project & Quality Management</span><br>Agile Methodology, Functional & Non-Functional Testing, Test Case Design, PageSpeed Insights</li>
+                            <li><span>Soft Skills</span><br>Communication, Adaptability, Collaboration, Time Management</li>
+                        </ul>
+                        
+                        
+                    </div>
+                    <div class="tab-contents" id="exp">
+                        <ul>
+                            <li><span>Certiport HTML & CSS Certification</span><br>Score: 771/1000 - Skilled in building responsive, accessible websites using modern HTML and CSS standards.</li>
+                            <li><span>PMI Project Management Certification</span><br>Score: 700/1000 - Proficient in project planning, scheduling, and stakeholder communication.</li>
+                            <li><span>DICT Digital Startup Development and Acceleration Program</span><br>Trained in innovation and startup business strategy.</li>
+                            <li><span>DICT Cybersecurity Orientation</span><br>Basics of online safety, threat mitigation, and data protection.</li>
+                        </ul>
+                        
+                        
+                    </div>
+                    <div class="tab-contents" id="educ">
+                        <ul>
+                            <li><span>National University - Dasmariñas</span><br>Bachelor of Science in Information Technology (2021–Present)</li>
+                            <li><span>Far Eastern Polytechnic College</span><br>Technical-Vocational-Livelihood (ICT) (2019–2021)</li>
+                            <li><span>Dasmariñas North National High School</span><br>(2015–2020)</li>
+                            <li><span>Salitran Elementary School</span><br>(2009–2015)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------Services Section------- -->
+    <div id="services">
+        <div class="container">
+            <h1>My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Full-Stack Web Development</h2>
+                    <p>Design and develop responsive websites using HTML, CSS, JavaScript, PHP, and MySQL. Ensure performance, security, and scalability.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h2>Cross-Platform App Development</h2>
+                    <p>Build high-quality mobile applications using Flutter with a focus on performance, UI/UX, and real-time features.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <h2>Project Management & QA</h2>
+                    <p>Coordinate project workflows using Agile principles. Conduct functional and non-functional testing to ensure product quality and reliability.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+             <!-- -----------PORTFOLIO--------- -->
+             <div id="portfolio">
+                <div class="container">
+                    <h1>My Work</h1>
+                    <!-- Tab Links -->
+                    <div class="tabs">
+                        <button class="tab-link active" onclick="showTab('web')">Web Development</button>
+                        <button class="tab-link" onclick="showTab('mobile')">Mobile Development</button>
+                    </div>
+                
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+                        <!-- Web Development Projects -->
+                        <div id="web" class="tab-pane active">
+                            <div class="work-list">
+                                <div class="work" data-aos="zoom-in" data-aos-delay="300">
+                                    <img src="images/DVO.png" alt="">
+                                    <div class="layer">
+                                        <h3>DVO System</h3>
+                                        <p>Veterinary Office system for pet rescue, adoption, and rehoming in Dasmariñas City.</p>
+                                        <a href="DVO.pdf"><i class="fa-solid fa-link"></i></a>
+                                    </div>
+                                </div>
+                                <div class="work" data-aos="zoom-in" data-aos-delay="300">
+                                    <img src="images/Add a subheading.png" alt="">
+                                    <div class="layer">
+                                        <h3>Denta Health System</h3>
+                                        <p>Dentist appointment and schedule management system to enhance clinic efficiency.</p>
+                                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                                    </div>
+                                </div>
+                                <div class="work" data-aos="zoom-in" data-aos-delay="300">
+                                    <img src="images/bilis_sagip.png" alt="">
+                                    <div class="layer">
+                                        <h3>Bilis Sagip</h3>
+                                        <p>Disaster response app for real-time reporting and coordination during emergencies.</p>
+                                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                                    </div>
+                                </div>
+                                <div class="work" data-aos="zoom-in" data-aos-delay="300">
+                                    <img src="images/Graphic Designer Online Portfolio (1).png" alt="">
+                                    <div class="layer">
+                                        <h3>Bilis Sagip</h3>
+                                        <p>Disaster response app for real-time reporting and coordination during emergencies.</p>
+                                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Mobile Development Projects -->
+                        <div id="mobile" class="tab-pane">
+                            <div class="work-list">
+                                
+                                <div class="work" data-aos="zoom-in" data-aos-delay="300">
+                                    <img src="images/bilis_sagip.png" alt="">
+                                    <div class="layer">
+                                        <h3>Another Mobile App</h3>
+                                        <p>Details about the second mobile app project.</p>
+                                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                                    </div>
+                                </div>
+                                <!-- Add more mobile projects here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+              </div>
+    <!-- -----------Contact Section--------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1>Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> reinmarcdelacueva@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 09560491129</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Dasmariñas City, Cavite, Philippines</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/reinmarc.delacueva/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/reinmarc-dela-cueva-a79a68311/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/reinmarc.dc/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@reinmarcdc.9569"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <a href="images/Reinmarc Dela Cueva (CV).pdf" class="btn">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="send_email.php" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <button class="btn" type="submit">Submit</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            document.querySelector(`.tab-links[onclick="opentab('${tabname}')"]`).classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+<script>
+    document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent default form submission
+
+        const form = e.target;
+        const data = new URLSearchParams(new FormData(form));
+
+        // Replace with your Google Apps Script Web App URL
+        const scriptURL = "https://script.google.com/macros/s/AKfycbz2vJx8yp9JwVvIzTHZ0XLCEmhiXH3Kdgu7uVZ-HEvfJOkvi8s_6zMhHoq_vmN85_rj/exec";
+
+        fetch(scriptURL, {
+            method: "POST",
+            body: data,
+        })
+        .then((response) => {
+            if (response.ok) {
+                // SweetAlert for success
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Message sent successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'Okay'
+                });
+                form.reset(); // Reset the form
+            } else {
+                // SweetAlert for failure
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Failed to send the message. Please try again.',
+                    icon: 'error',
+                    confirmButtonText: 'Try Again'
+                });
+            }
+        })
+        .catch((error) => {
+            console.error("Error!", error.message);
+            // SweetAlert for network or other errors
+            Swal.fire({
+                title: 'Error!',
+                text: 'Error sending message.',
+                icon: 'error',
+                confirmButtonText: 'Close'
+            });
+        });
+    });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+<script>
+    const text = "I build Web & Mobile Experiences.";
+    let index = 0;
+    
+    function type() {
+      if (index < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 50);
+      }
+    }
+    window.addEventListener('DOMContentLoaded', type);
+    </script>
+    <script>
+        function showTab(tabName) {
+    // Hide all tab content
+    const tabs = document.querySelectorAll('.tab-pane');
+    tabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    // Show the selected tab
+    const activeTab = document.getElementById(tabName);
+    activeTab.classList.add('active');
+
+    // Update active link
+    const tabLinks = document.querySelectorAll('.tab-link');
+    tabLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+    document.querySelector(`.tab-link[onclick="showTab('${tabName}')"]`).classList.add('active');
+}
+
+    </script>
+</body>
+</html>
