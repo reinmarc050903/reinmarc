@@ -41,6 +41,7 @@ nav{
         color: #2ad882;
     }
   }
+  
 nav ul li{
     display: inline-block;
     list-style: none;
@@ -68,6 +69,7 @@ nav ul li a:hover::after{
 .header_text{
     margin-top:20%;
     font-size: 30px;
+
 }
 .header_text h1{
     margin-top:20px;
@@ -209,6 +211,7 @@ margin: 10px 0;
     font-size: 1.2rem;
     font-style: italic;
     margin-top: 10px;
+
 }
 
 .layer{
@@ -327,6 +330,11 @@ form .btn{
 nav .fa-solid{ display: none;}
 
 @media only screen and (max-width: 600px){
+    
+    nav {
+        position: relative;
+        z-index: 1000;
+    }
 
     .header_text{
         margin-top: 70%;
@@ -342,15 +350,16 @@ nav .fa-solid{ display: none;}
         font-size: 25px;
     }
     nav ul{
+        z-index: 9999;
         background: #2ad882;
-        position:fixed;
+        position:absolute;
         top: 0;
         right: 0px;
         width: 200px;
+        height:auto;
         margin-top:-10px;
         margin-right:-13%;
         height: 100vh;
-        z-index: 2;
         padding-top:50px;
         transition: right 0.5s;
     }
