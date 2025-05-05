@@ -28,6 +28,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+
     
 }
 .logo{
@@ -335,30 +336,39 @@ nav .fa-solid{ display: none;}
             font-size: 30px;
         }
     }
+    
     nav .fa-solid{ 
         display:block;
         font-size: 25px;
     }
     nav ul{
         background: #2ad882;
-        position: fixed;
+        position:fixed;
         top: 0;
-        right: -200px;
+        right: 0px;
         width: 200px;
+        margin-top:-10px;
+        margin-right:-13%;
         height: 100vh;
-        margin-top: 50px;
         z-index: 2;
+        padding-top:50px;
         transition: right 0.5s;
     }
     nav ul li{
-        display: block;
-        margin: 25px;
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        margin: 10px;
+        border-radius:5px;
+        background:#1f242b;
+        height:5%;
     }
 nav ul .fa-solid{
     position: absolute;
     top: 25px;
     left: 25px;
     cursor: pointer;
+    color:red;
 }
 h1{
     font-size: 40px;
