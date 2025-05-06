@@ -11,25 +11,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" type="image/png" href="images/logo.png">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+    
+</style>
 </head>
 <body>
     <div id="header">
+        <nav id="navbar" class="main-navbar" data-aos="fade-down" data-aos-delay="200">
+            <ul id="sidemenu" class="nav-links">
+                <li><a href="#header" class="active"><i class="fa-solid fa-house"></i><p>Home</p></a></li>
+                <li><a href="#about"><i class="fa-solid fa-address-card"></i><p>About</p></a></li>
+                <li><a href="#skills"><i class="fa-solid fa-toolbox"></i><p>Skills</p></a></li>
+                <li class="logo-center"><span class="logo-circle">RD</span></li>
+                <li><a href="#services"><i class="fa-solid fa-laptop"></i><p>Services</p></a></li>
+                <li><a href="#portfolio"><i class="fa-solid fa-list-check"></i><p>portfolio</p></a></li>
+                <li><a href="#contact"><i class="fa-solid fa-phone-volume"></i><p>Contact</p></a></li>
+            </ul>
+        </nav>
         <div class="container">
-            <nav id="navbar" data-aos="fade-down" data-aos-delay="200">
-
-                <a href="#" class="logo">Reinmarc <span>DC.</span></a>
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
+        
             <div class="header_text" data-aos="fade-down">
                 <p id="typing-text">BSIT Student Specializing in Mobile and Web Applications</p>
                 <h1>Hi, I'm <span>Reinmarc</span><br>From Dasmarinas, Cavite</h1>
@@ -86,6 +89,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+     <!-- ------Skiils Section------ -->
+     <div id="skills">
+        <div class="container">
+            
         </div>
     </div>
     <!-- ---------Services Section------- -->
@@ -224,15 +233,7 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
     </script>
-    <script>
-        var sidemenu = document.getElementById("sidemenu");
-        function openmenu() {
-            sidemenu.style.right = "0";
-        }
-        function closemenu() {
-            sidemenu.style.right = "-200px";
-        }
-    </script>
+
 <script>
     document.querySelector("form").addEventListener("submit", function (e) {
         e.preventDefault(); // Prevent default form submission
@@ -319,6 +320,36 @@
     document.querySelector(`.tab-link[onclick="showTab('${tabName}')"]`).classList.add('active');
 }
 
+    </script>
+    <script>
+        // Get all links inside the navbar
+        const navLinks = document.querySelectorAll('.nav-links a');
+    
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(nav => nav.classList.remove('active')); // remove active from all
+                this.classList.add('active'); // add active to clicked
+            });
+        });
+    
+        // Optional: Automatically update active link on scroll
+        const sections = document.querySelectorAll("section[id]");
+    
+        window.addEventListener("scroll", () => {
+            let scrollY = window.pageYOffset;
+    
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 60;
+                const sectionId = current.getAttribute("id");
+    
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    document.querySelector(".nav-links a[href*=" + sectionId + "]").classList.add("active");
+                } else {
+                    document.querySelector(".nav-links a[href*=" + sectionId + "]").classList.remove("active");
+                }
+            });
+        });
     </script>
 </body>
 </html>
