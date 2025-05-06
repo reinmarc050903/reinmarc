@@ -23,48 +23,92 @@ body{
 .container{
     padding: 10px 10%;
 }
-nav{
+/* General navbar style */
+.main-navbar {
+    margin: 15px 3%;
+    position: fixed;
+    transform: translateX(-50%);
+    background: #2ad882;
+    padding: 5px 5px;
+    border-radius: 50px;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 95%;
+
+}
+
+.nav-links {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content:space-between; /* Distribute items evenly */
+  
 }
-.logo{
-    font-size: 25px;
+  
+  /* Standard link style */
+  .nav-links li a, li i{
+    display: inline-block;
     color: white;
-    font-weight: 600;
     text-decoration: none;
-
-    span{
-        color: #2ad882;
-    }
+    padding: 10px 30px;
+    transition: 0.3s;
+    border-radius: 30px;    
   }
   
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
+  .nav-links li i{
+    display: none;
+  }
+  
+  /* Active link (e.g. Home) */
+  .nav-links li a.active {
+    background: #1f242b;
+    color: white;
+    border-radius: 30px;
 }
-nav ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-}
-nav ul li a::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #2ad882;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-nav ul li a:hover::after{
-    width: 100%;
+
+  
+  /* Hover effect */
+  .nav-links li a:hover {
+    background: #1f242b;
+    color: white;
+
+    border-radius: 30px;
+  }
+  
+  /* Center logo style */
+
+  
+  .logo-circle {
+    background: white;
+    color: black;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 50%;
+    font-family: sans-serif;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links li a, li i{
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        padding: 10px 10px;
+        transition: 0.3s;
+        border-radius: 30px;    
+      }
+
+    .nav-links li i{
+        display: inline-block;
+      }
+      .nav-links li p{
+        display: none;
+      }
+
+    .logo-center {
+        display: none;
+    }
 }
 .header_text{
     margin-top:20%;
@@ -331,10 +375,7 @@ nav .fa-solid{ display: none;}
 
 @media only screen and (max-width: 600px){
     
-    nav {
-        position: relative;
-        z-index: 1000;
-    }
+
 
     .header_text{
         margin-top: 70%;
@@ -345,40 +386,7 @@ nav .fa-solid{ display: none;}
         }
     }
     
-    nav .fa-solid{ 
-        display:block;
-        font-size: 25px;
-    }
-    nav ul{
-        z-index: 9999;
-        background: #2ad882;
-        position:absolute;
-        top: 0;
-        right: 0px;
-        width: 200px;
-        height:auto;
-        margin-top:-10px;
-        margin-right:-13%;
-        height: 100vh;
-        padding-top:50px;
-        transition: right 0.5s;
-    }
-    nav ul li{
-        display: flex;
-        align-items:center;
-        justify-content:center;
-        margin: 10px;
-        border-radius:5px;
-        background:#1f242b;
-        height:5%;
-    }
-nav ul .fa-solid{
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    cursor: pointer;
-    color:red;
-}
+    
 h1{
     font-size: 40px;
 }
