@@ -379,7 +379,7 @@ margin: 10px 0;
     flex-direction: column;
     padding: 0 5%;
     text-align: center;
-    font-size: 1rem; /* changed from 14px */
+    font-size: 80%; /* changed from 14px */
     transition: height 0.5s;
 }
 
