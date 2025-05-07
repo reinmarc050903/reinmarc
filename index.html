@@ -19,7 +19,7 @@
 </style>
 </head>
 <body>
-    <div id="header">
+    <section id="header">
         <nav id="navbar" class="main-navbar" data-aos="fade-down" data-aos-delay="200">
             <ul id="sidemenu" class="nav-links">
                 <li><a href="#header" class="active"><i class="fa-solid fa-house"></i><p>Home</p></a></li>
@@ -39,9 +39,9 @@
             </div>
             
         </div>
-    </div>
+    </section>
     <!-- ------About Section------ -->
-    <div id="about">
+    <section id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
@@ -76,9 +76,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
      <!-- ------Skiils Section------ -->
-     <div id="skills">
+     <section id="skills">
         <div class="container">
             <h1 class="section-title">Technical Skills</h1>
 <div class="skills-container">
@@ -120,9 +120,9 @@
 </div>
 
         </div>
-    </div>
+     </section>
     <!-- ---------Services Section------- -->
-    <div id="services">
+    <section id="services">
         <div class="container">
             <h1>My Services</h1>
             <div class="services-list">
@@ -144,9 +144,9 @@
             </div>
             
         </div>
-    </div>
+    </section>
              <!-- -----------PORTFOLIO--------- -->
-             <div id="portfolio">
+             <section id="portfolio">
                 <div class="container">
                     <h1>My Work</h1>
                     <!-- Tab Links -->
@@ -211,9 +211,9 @@
                     </div>
                 </div>
                 
-              </div>
+             </section>
     <!-- -----------Contact Section--------- -->
-    <div id="contact">
+    <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -240,7 +240,32 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <script>
+        const section = document.querySelectorAll("section");
+        const navLink = document.querySelectorAll(".nav-links li a");
+    
+        window.addEventListener("scroll", () => {
+            let current = "";
+    
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute("id");
+                }
+            });
+    
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+    
+      
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
