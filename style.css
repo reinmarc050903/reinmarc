@@ -417,6 +417,9 @@ margin: 10px 0;
 }
 /* 
 ---------contact------------- */
+#contact {
+  min-height: 100vh; /* o kahit 80vh */
+}
 
 .contact-left{
     flex-basis: 35%;
@@ -433,6 +436,7 @@ margin: 10px 0;
 }
 .contact-right{
     flex-basis: 60%;
+    cursor:not-allowed;
 }
 .social-icons{
     margin-top: 30px;
@@ -552,6 +556,8 @@ h1{
 .tab-content {
     display: flex;
     justify-content: center;
+
+
 }
 
 .tab-pane {
