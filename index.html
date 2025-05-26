@@ -45,7 +45,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/aboutme.jpg" alt="">
+                    <img src="images/DSC_4242.JPG" alt="">
                 </div>
                 <div class="about-col-2">
                     <h1>About Me</h1>
@@ -241,29 +241,36 @@
             </div>
         </div>
     </section>
-    <script>
-        const section = document.querySelectorAll("section");
-        const navLink = document.querySelectorAll(".nav-links li a");
-    
-        window.addEventListener("scroll", () => {
-            let current = "";
-    
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - sectionHeight / 3) {
-                    current = section.getAttribute("id");
-                }
-            });
-    
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === "#" + current) {
-                    link.classList.add("active");
-                }
-            });
-        });
-    </script>
+<script>
+  const section = document.querySelectorAll("section");
+  const navLink = document.querySelectorAll(".nav-links li a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 150;
+      const sectionHeight = section.clientHeight;
+
+      if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    // ✅ Check if at bottom of page
+    if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight - 1) {
+      current = "contact";
+    }
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
     
       
     <script>
@@ -398,5 +405,6 @@
             });
         });
     </script>
+    
 </body>
 </html>
