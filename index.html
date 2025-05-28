@@ -34,7 +34,7 @@
         <div class="container">
         
             <div class="header_text" data-aos="fade-down">
-                <p id="typing-text">Web and App Development | </p>
+                <p id="typing-text"></p>
                 <h1>Hi, I'm <span>Reinmarc</span><br>From Dasmarinas, Cavite</h1>
             </div>
             
@@ -401,18 +401,39 @@
   });
 </script>
 <script>
-    const text = "Project Management & QA";
-    let index = 0;
-    
-    function type() {
-      if (index < text.length) {
-        document.getElementById("typing-text").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(type, 50);
-      }
+const roles = [
+    "Web and App Development",
+    "Project Management & QA",
+    "UI/UX Designer"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingText = document.getElementById("typing-text");
+
+function type() {
+    const currentRole = roles[roleIndex];
+    if (isDeleting) {
+        typingText.innerHTML = currentRole.substring(0, charIndex--);
+    } else {
+        typingText.innerHTML = currentRole.substring(0, charIndex++);
     }
-    window.addEventListener('DOMContentLoaded', type);
-    </script>
+
+    if (!isDeleting && charIndex === currentRole.length) {
+        isDeleting = true;
+        setTimeout(type, 1000); // pause before deleting
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(type, 300); // pause before typing next role
+    } else {
+        setTimeout(type, isDeleting ? 30 : 50);
+    }
+}
+
+window.addEventListener('DOMContentLoaded', type);
+</script>
     <script>
         function showTab(tabName) {
     // Hide all tab content
